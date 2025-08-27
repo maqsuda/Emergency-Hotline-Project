@@ -24,15 +24,15 @@
                 </div>
                 <div class="flex gap-4 lg:gap-10 justify-between items-center">
                     <div class="flex lg:w-[125px] bg-[#41FF6B1A] lg:py-4 lg:px-10 px-2 rounded-full gap-2">
-                        <p>0</p>
+                        <p id="total-count">0</p>
                         <img src="./images/heart.png" alt="" class="w-[20px]">
                     </div>
                     <div class="flex bg-[#41FF6B1A] lg:py-4 lg:px-10 scroll-px-20 rounded-full gap-2">
-                        <p>0</p>
+                        <p id="total-coin">100</p>
                         <img src="./images/coin.png" alt="" class="w-[20px]">
                     </div>
                     <div class="bg-[#00A63E] lg:py-4 lg:px-10 rounded-full  text-white px-2">
-                        <button><span class="px-2 ">0</span>Copy</button>
+                        <button><span id="total-copy" class="px-2">0</span>Copy</button>
                     </div>
                 </div>
             </div>
@@ -41,9 +41,11 @@
     </header>
 
     <main class="bg-[#41FF6B1A]">
-        <div class="banner h-[140px] bg-[#013223] flex flex-col justify-center items-center py-20">
+        <div
+            class="banner h-[140px] bg-radial-[at_50%_75%] from-[#013223] via-[#006747] to-[#013223] to-90%  flex flex-col justify-center items-center py-20">
 
-            <img src="./images/logo-dark.png" alt="" class="w-[50px] lg:w-[80px]">
+
+            <img src="./images/logo-dark.png" alt="" class="w-[50px] lg:w-[80px] ">
             <h1 class="text-white">জরুরি সেবা ডিরেক্টরি</h1>
             <p class="text-white text-center p-2">Government Emergency Services at Your Fingertip – A
                 Project by
@@ -61,21 +63,21 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/emergency.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="national-emergence" class="text-xl font-bold">
                                 জাতীয় জরুরি সেবা
                             </h2>
                             <p class="text-gray-500">National Emergency</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="national-emergence-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">সার্বজনীন</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callCalculation()"><i class="fa-solid fa-phone mr-2"></i><button>Call
                                     </button> </div>
                             </div>
                         </div>
@@ -86,7 +88,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/police.png" alt="" class="size-10 p-2 bg-[#DFEFFF] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400 " onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -110,7 +112,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/fire-service.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -136,7 +138,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/ambulance.png" alt="" class="size-10 p-2 bg-pink-200 rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -161,7 +163,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/emergency.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -185,7 +187,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/emergency.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -211,7 +213,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/emergency.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -236,7 +238,7 @@
 
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/brac.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -261,7 +263,7 @@
                         <div class="flex justify-between items-center mx-5 mt-2">
                             <img src="./images/Bangladesh-Railway.png" alt=""
                                 class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
-                            <i class="fa-regular fa-heart text-gray-400"></i>
+                            <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
                             <h2 class="text-xl font-bold">
@@ -286,7 +288,7 @@
             <div id="call-history "
                 class="lg:col-span-3 mr-5 bg-white rounded-xl mb-10 flex justify-between items-start px-2 py-2">
                 <div class="flex items-center ">
-                    <i class="fa-regular fa-alarm-clock text-gray-500"></i>
+                    <i class="fa-regular fa-alarm-clock text-gray-500" onclick="countTotalCopy()"></i>
                     <h2 class="pl-2 font-bold">Call History</h2>
                 </div>
                 <div>
@@ -295,7 +297,7 @@
             </div>
         </div>
     </main>
-
+    <script src="./emergency.js"></script>
 </body>
 
 </html>
