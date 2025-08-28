@@ -65,7 +65,7 @@
                             <img src="./images/emergency.png" alt="" class="size-10 p-2 bg-[#ffe3e2] rounded-xl">
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
-                        <div class="card-body">
+                        <div id="emergency" class="card-body">
                             <h2 id="national-emergence" class="text-xl font-bold">
                                 জাতীয় জরুরি সেবা
                             </h2>
@@ -73,12 +73,14 @@
                             <h2 id="national-emergence-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">সার্বজনীন</span></p>
                             <div class="flex justify-between gap-2 mt-5">
-                                <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
-                                        class="fa-solid fa-copy"></i><button>Copy</button>
+                                <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"
+                                    onclick="copyText()"><i class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
                                 <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
-                                    onclick="callCalculation()"><i class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                    onclick="callHistoryCalculation('national-emergence', 'national-emergence-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -91,17 +93,18 @@
                             <i class="fa-regular fa-heart text-gray-400 " onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="polish-name" class="text-xl font-bold">
                                 পুলিশ
                             </h2>
                             <p class="text-gray-500">Police</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="polish-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">পুলিশ</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('polish-name', 'polish-number')"><i
                                         class="fa-solid fa-phone mr-2"></i><button>Call
                                     </button> </div>
                             </div>
@@ -115,17 +118,18 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="fire-service-name" class="text-xl font-bold">
                                 ফায়ার সার্ভিস
                             </h2>
                             <p class="text-gray-500">Fire Service</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="fire-service-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">ফায়ার</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('fire-service-name', 'fire-service-number')"><i
                                         class="fa-solid fa-phone mr-2"></i><button>Call
                                     </button> </div>
                             </div>
@@ -141,19 +145,21 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="ambulance-service-name" class="text-xl font-bold">
                                 অ্যাম্বুলেন্স
                             </h2>
                             <p class="text-gray-500">Ambulance</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="ambulance-service-number" class="text-xl font-bold mt-2">1994-999999</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">স্বাস্থ্য</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('ambulance-service-name', 'ambulance-service-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -166,19 +172,21 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="women-service-name" class="text-xl font-bold">
                                 নারী ও শিশু সহায়তা
                             </h2>
                             <p class="text-gray-500">Women & Child Helpline</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="women-service-number" class="text-xl font-bold mt-2">109</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">সহায়তা</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('women-service-name', 'women-service-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,19 +198,21 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="anty-corruption-service-name" class="text-xl font-bold">
                                 দুদক
                             </h2>
                             <p class="text-gray-500">Anti-Corruption</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="anty-corruption-service-number" class="text-xl font-bold mt-2">106</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">সরকারি</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('anty-corruption-service-name', 'anty-corruption-service-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -216,19 +226,21 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="electricity-servicce-name" class="text-xl font-bold">
                                 বিদ্যুৎ বিভ্রাট
                             </h2>
                             <p class="text-gray-500">Electricity Outage</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="electricity-servicce-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class=" p-2 rounded-full bg-gray-100 text-gray-500">বিদ্যুৎ</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('electricity-servicce-name', 'electricity-servicce-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -241,19 +253,21 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="brac-service-name" class="text-xl font-bold">
                                 ব্র্যাক
                             </h2>
                             <p class="text-gray-500">Brac</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="brac-service-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class="border p-2 rounded-full bg-gray-100 text-gray-500">এনজিও</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('brac-service-name', 'brac-service-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -266,35 +280,56 @@
                             <i class="fa-regular fa-heart text-gray-400" onclick="countTotalCopy()"></i>
                         </div>
                         <div class="card-body">
-                            <h2 class="text-xl font-bold">
+                            <h2 id="railway-service-name" class="text-xl font-bold">
                                 বাংলাদেশ রেলওয়ে
                             </h2>
                             <p class="text-gray-500">Bangladesh Railway</p>
-                            <h2 class="text-xl font-bold mt-2">999</h2>
+                            <h2 id="railway-service-number" class="text-xl font-bold mt-2">999</h2>
                             <p><span class="border p-2 rounded-full bg-gray-100 text-gray-500">পরিবহন</span></p>
                             <div class="flex justify-between gap-2 mt-5">
                                 <div class="border-2 border-[#d4d6d5] px-10 p-2 rounded-lg text-[#5c5c5c]"><i
                                         class="fa-solid fa-copy"></i><button>Copy</button>
                                 </div>
-                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"><i
-                                        class="fa-solid fa-phone mr-2"></i><button>Call
-                                    </button> </div>
+                                <div class="border px-10 p-2 rounded-lg bg-[#00A63E] text-white"
+                                    onclick="callHistoryCalculation('railway-service-name', 'railway-service-number')">
+                                    <i class="fa-solid fa-phone mr-2"></i><button>Call
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div id="call-history "
-                class="lg:col-span-3 mr-5 bg-white rounded-xl mb-10 flex justify-between items-start px-2 py-2">
-                <div class="flex items-center ">
-                    <i class="fa-regular fa-alarm-clock text-gray-500" onclick="countTotalCopy()"></i>
-                    <h2 class="pl-2 font-bold">Call History</h2>
+            <div id="call-history " class="lg:col-span-3 mr-5 bg-white rounded-xl mb-10 ">
+
+                <!--Header Section  -->
+
+                <div class="flex justify-between items-start px-2 py-2">
+                    <div class="flex items-center ">
+                        <i class="fa-regular fa-alarm-clock text-gray-500" onclick="countTotalCopy()"></i>
+                        <h2 class="pl-2 font-bold">Call History</h2>
+                    </div>
+                    <div>
+                        <button class="px-5 py-2 bg-[#00A63E] text-white rounded-xl"
+                            onclick="clearData()">Clear</button>
+                    </div>
+
                 </div>
-                <div>
-                    <button class="px-5 py-2 bg-[#00A63E] text-white rounded-xl">Clear</button>
+
+                <div id="transction-container" class="px-3 ">
+
+                    <!-- History  -->
+
+
+
                 </div>
+
+
             </div>
+
+
+
         </div>
     </main>
     <script src="./emergency.js"></script>
