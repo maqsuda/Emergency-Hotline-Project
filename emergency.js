@@ -57,4 +57,9 @@ function callHistoryCalculation(serviceName, serviceNumber) {
 function copyText(serviceNumber) {
   const phoneNumber = document.getElementById(serviceNumber).innerText;
   navigator.clipboard.writeText(phoneNumber);
+  alert("নাম্বার কপি হয়েছে : " + phoneNumber);
+
+  let totalCopy = parseInt(document.getElementById("total-copy").innerText);
+  totalCopy = totalCopy + 1;
+  document.getElementById("total-copy").innerText = totalCopy;
 }
