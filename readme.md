@@ -17,6 +17,7 @@ Selects all elements that match a specified CSS selector.
 To select multiple elements using complex CSS selectors, returning a collection that can be iterated over.
 
 2.  How do you **create and insert a new element into the DOM**?
+    Ans.
     Use document.createElement() for creation and adding a new element by appendChild.
     Examle:
     let parentDiv = document.createElement('div');
@@ -25,11 +26,11 @@ To select multiple elements using complex CSS selectors, returning a collection 
     parentDiv.appendChild(h2);
 
 3.  What is **Event Bubbling** and how does it work?
-    event bubbling is a technique which bubbles up and searches for everything related to the event.
+    Ans. Event bubbling is a technique which bubbles up and searches for everything related to the event.
 
 4.  What is **Event Delegation** in JavaScript? Why is it useful?
-    it is improves both the performance and maintainability of code, especially when dealing with dynamic content or a large number of elements.
+    Ans. It is improves both the performance and maintainability of code, especially when dealing with dynamic content or a large number of elements.
 
 5.  What is the difference between **preventDefault() and stopPropagation()** methods?
-    preventDefault() is used to prevent the default action.
+    Ans. preventDefault() is used to prevent the default action.
     stopPropagation() is used to prevent the propagation that is If event.stopPropagation() is called within an event handler, the event will not continue to travel up or down the DOM tree.
