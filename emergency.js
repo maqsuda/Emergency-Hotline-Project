@@ -12,15 +12,16 @@ function countTotalCopy() {
 }
 
 function callHistoryCalculation(serviceName, serviceNumber) {
+  const sName = document.getElementById(serviceName).innerText;
+  const sNumber = document.getElementById(serviceNumber).innerText;
+
   let totalCoin = parseInt(document.getElementById("total-coin").innerText);
   if (totalCoin < 20) {
-    alert("Invalid");
+    alert("❌" + "আপনার পর্যাপ্ত কয়েন নেই । কল করতে কমপক্ষে ২০ কয়েন লাগবে ।");
   } else {
+    alert("📞 " + "Calling " + sName + " " + sNumber + "...");
     totalCoin = totalCoin - 20;
     document.getElementById("total-coin").innerText = totalCoin;
-
-    const sName = document.getElementById(serviceName).innerText;
-    const sNumber = document.getElementById(serviceNumber).innerText;
 
     const date = new Date().toLocaleTimeString();
 
@@ -53,9 +54,7 @@ function callHistoryCalculation(serviceName, serviceNumber) {
   }
 }
 
-function copyText() {
-  const phoneNumber = document.getElementById(
-    "national-emergence-number"
-  ).innerText;
+function copyText(serviceNumber) {
+  const phoneNumber = document.getElementById(serviceNumber).innerText;
   navigator.clipboard.writeText(phoneNumber);
 }
